@@ -1,0 +1,246 @@
+ :root {
+     --purple-600: hsl(246, 80%, 60%);
+     --orange-300: hsl(15, 100%, 70%);
+     --blue-300: hsl(195, 74%, 62%);
+     --pink-400: hsl(348, 100%, 68%);
+     --green-400: hsl(145, 58%, 55%);
+     --purple-700: hsl(264, 64%, 52%);
+     --yellow-300: hsl(43, 84%, 65%);
+
+     --navy-950: hsl(226, 43%, 10%);
+     --navy-900: hsl(235, 46%, 20%);
+     --purple-500: hsl(235, 45%, 61%);
+     --navy-200: hsl(236, 100%, 87%);
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Rubik', sans-serif;
+ }
+
+ body {
+     background-color: var(--navy-950);
+     color: white;
+     padding: 2rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .dashboard {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 2rem;
+     max-width: 1200px;
+     width: 100%;
+ }
+
+ .profile-card {
+     background-color: var(--navy-900);
+
+     border-radius: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     grid-row: span 2;
+ }
+
+ /* Top Section */
+ .profile-top {
+     background-color: var(--purple-700);
+     padding: 2rem 1.5rem;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     margin: 0;
+     height: 360px;
+     border-radius: 30px;
+   
+ }
+
+ .profile-card img {
+     width: 60px;
+     height: 60px;
+     border: 2px solid white;
+     border-radius: 50%;
+ }
+
+ .profile-text {
+     margin-top: 1.5rem;
+ }
+
+ .profile-text small {
+     color: var(--navy-200);
+ }
+
+ .profile-text h2 {
+     font-weight: 300;
+     font-size: 1.5rem;
+ }
+
+
+ .timeframe-options {
+     /* background-color: rgb(24, 24, 44); */
+     /* width: 100%; */
+     padding: 2rem 1.5rem;
+
+     margin-top: 2rem;
+ }
+
+ .timeframe-options ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+
+
+ }
+
+ .timeframe-options li {
+     color: var(--purple-500);
+     margin-bottom: 0.5rem;
+     cursor: pointer;
+     font-size: 1rem;
+
+ }
+
+ .timeframe-options li.active {
+     color: white;
+ }
+
+
+
+
+ .card {
+     background-color: var(--navy-900);
+     border-radius: 20px;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .card .background {
+     height: 60px;
+     width: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+
+ }
+
+ .card-content {
+     padding: 1.5rem;
+     margin-top: 40px;
+     position: relative;
+     /* border-radius: 90px; */
+
+ }
+
+ .card-title {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 18px;
+     font-weight: 500;
+     color: var(--navy-200);
+     margin-bottom: 10px;
+       border-radius: 1rem 1rem 0 0; 
+       width: 100%;
+
+
+ }
+
+
+ .options img {
+     width: 20px;
+     height: 5px;
+     cursor: pointer;
+     filter: brightness(0) invert(1);
+     /* Optional: make white if the image is black */
+ }
+
+ .card-time {
+     font-size: 2rem;
+     font-weight: 300;
+     margin-top: 1rem;
+ }
+
+ .card-previous {
+     color: var(--purple-500);
+     font-size: 0.9rem;
+ }
+
+ .bg-work {
+     background-color: var(--orange-300);
+     background-image: url('images/icon-work.svg');
+     /* Adjust the path if needed */
+     background-repeat: no-repeat;
+     background-position: top right;
+     background-size: 60px;
+
+     height: 100px;
+     /* Match the height you need for the top banner */
+     border-radius: 1rem 1rem 0 0;
+ }
+
+
+ .bg-play {
+     background-color: var(--blue-300);
+     /* Use the correct color from your palette */
+     background-image: url('images/icon-play.svg');
+     /* Update with correct icon path */
+     background-repeat: no-repeat;
+     background-position: top right;
+     background-size: 60px;
+
+     height: 100px;
+     border-radius: 1rem 1rem 0 0;
+ }
+
+
+ .bg-study {
+     background-color: var(--pink-400);
+     background-image: url('images/icon-study.svg');
+     background-repeat: no-repeat;
+     background-position: top right;
+     background-size: 60px;
+
+     height: 100px;
+     border-radius: 1rem 1rem 0 0;
+ }
+
+
+ .bg-exercise {
+     background-color: var(--green-400);
+     background-image: url('images/icon-exercise.svg');
+     background-repeat: no-repeat;
+     background-position: top right;
+     background-size: 60px;
+
+     height: 100px;
+     border-radius: 1rem 1rem 0 0;
+ }
+
+
+ .bg-social {
+     background-color: var(--purple-700);
+     background-image: url('images/icon-social.svg');
+     background-repeat: no-repeat;
+     background-position: top right;
+     background-size: 60px;
+
+     height: 100px;
+     border-radius: 1rem 1rem 0 0;
+ }
+
+
+ .bg-self-care {
+     background-color: var(--yellow-300);
+     background-image: url('images/icon-self-care.svg');
+     background-repeat: no-repeat;
+     background-position: top right;
+     background-size: 60px;
+
+     height: 100px;
+     border-radius: 1rem 1rem 0 0;
+ }
